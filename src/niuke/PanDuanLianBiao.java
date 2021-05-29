@@ -7,7 +7,7 @@ package niuke;
  */
 
 public class PanDuanLianBiao {
-    class ListNode{
+    static class ListNode{
         int val;
         ListNode next = null;
 
