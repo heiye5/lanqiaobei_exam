@@ -1,20 +1,20 @@
 package wuyou.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Test {
     public static void main (String args[]){
-        PrintNumber p = new PrintNumber();
-        Thread t = new Thread( p );
-        t.start();
-        p.run();
-    }
-    static class PrintNumber implements Runnable{
-        int i;
-        public void run( ){
-            while( true ){
-                System.out.println(Thread.currentThread().getName()+"i=" + i++);
-                if(i==2)
-                    break;
-            }
-        }
+        List lis=new ArrayList();
+        lis.add("1");
+        lis.add("2");
+        lis.add("3");
+        lis.add("4");
+        lis.add("2");
+        for(int i=0;i<2;i++)
+            System.out.println(i);
+//            lis.remove(i);
+        for(Object s : lis)
+            System.out.print(s + " ");
     }
 }
